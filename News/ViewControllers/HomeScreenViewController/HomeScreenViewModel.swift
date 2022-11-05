@@ -84,7 +84,7 @@ class HomeScreenViewModel {
         return RealmViewModel.shared.getAllNews() ?? nil
     }
     
-    private private func saveNewsToDB(newsDTO: NewsDTO) -> Bool {
+    private func saveNewsToDB(newsDTO: NewsDTO) -> Bool {
         RealmViewModel.shared.removeAllNews()
         return RealmViewModel.shared.addToDB(newsDTO)
     }
